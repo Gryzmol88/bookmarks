@@ -12,6 +12,7 @@
   {% else %}
     <p>Wypełnik poniższy formularz aby się zalogować. Jeżeli nie masz jeszcze konta,
     możesz je utworzyć <a href="{% url 'register' %}">tutaj</a> </p>
+<ul><li class="google"><a href="{% url 'social:begin' 'google-oauth2' %}">Zaloguj się za pomocą Google</a></li></ul>
   {% endif %}
     <div class="login-form">
       <form action="{% url 'login' %}" method="post">

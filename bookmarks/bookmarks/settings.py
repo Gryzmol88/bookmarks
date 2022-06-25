@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social_django',
+    'images.apps.ImagesConfig',
 ]
 
 MIDDLEWARE = [
@@ -140,4 +141,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
+    'social_core.backends.google.GoogleOAuth2',
 ]
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '1003874828868-0p0pblc4m4688tgubmlq9s5ftvqgaina.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
